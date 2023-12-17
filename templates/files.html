@@ -1,0 +1,75 @@
+<!-- templates/viewAllFiles.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Files - FileFlow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Additional styles for better spacing */
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Files</h1>
+    
+    <ul>
+        {{range .Files}}
+            <li>
+                <a href="/download?filename={{.}}" download="{{.}}">{{.}}</a>
+            </li>
+        {{end}}
+    </ul>
+    
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
