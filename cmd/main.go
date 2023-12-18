@@ -15,7 +15,7 @@ func main() {
 		Handler: r,
 	}
 
-	fmt.Println("FileFox server is Running on 127.0.0.1:7000")
+	fmt.Println("FileFlow server is Running on 127.0.0.1:7000")
 
 	done := make(chan struct{})
 
